@@ -4,7 +4,7 @@
     function normalizeOptions(options) {
         if (typeof options === 'string' || ch.util.isArray(options)) {
             options = {
-                'selected': options
+                'selected': options.selected
             };
         }
         return options;
@@ -443,7 +443,7 @@
 
                 // Add week names
                 for (dayIndex = 0; dayIndex < 7; dayIndex += 1) {
-                    t.push('<th role="columnheader">' + that._defaults.weekdays[dayIndex] + '</th>');
+                    t.push('<th role="columnheader">' + that._options.weekdays[dayIndex] + '</th>');
                 }
 
                 // Close thead structure
@@ -456,7 +456,7 @@
 
             table = [
                 '<table class="ch-calendar-month" role="grid" id="ch-calendar-grid-' + that.uid + '">',
-                '<caption>' + that._defaults.monthsNames[date.month - 1] + ' - ' + date.year + '</caption>',
+                '<caption>' + that._options.monthsNames[date.month - 1] + ' - ' + date.year + '</caption>',
                 thead
             ],
 
