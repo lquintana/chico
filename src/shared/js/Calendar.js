@@ -4,7 +4,7 @@
     function normalizeOptions(options) {
         if (typeof options === 'string' || ch.util.isArray(options)) {
             options = {
-                'selected': options.selected
+                'selected': options
             };
         }
         return options;
